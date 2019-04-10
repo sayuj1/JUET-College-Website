@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.jpg" type="image/jpg" sizes="16x16">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/navbar.css">
+<style>
+    .about_us{
+        box-shadow: 5px 2px 5px grey;
+        transition: .5s;
+    } 
+    .about_us:hover{
+        box-shadow: 10px 10px 10px grey;
+        transition: .5s;
+    }  
+    .contact_details td{
+        float: left;
+    }
+    .contact_details th{
+        width: 20%;
+        float: left;
+    }
+</style>
+</head>
+<body>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="facilities.html">Facilities</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Contact</a>
+  </li>
+</ul>
+<br><br>
+
+<div class="container" style="text-align: center;">
+    <h1>Contact Us</h1>
+    <hr>
+    	 <br>
+ 	 <br>
+ 	 <div align="center">
+ 	<table class="table table-borderless table-striped" style="width: 50%;">
+  <tbody class="contact_details">
+    <tr>
+      <th scope="row">Phone :</th>
+      <td>+91-7544-267051, 267310-314</td>
+    </tr>
+    <tr>
+      <th scope="row">Fax :</th>
+      <td>+91-7544-267011</td>
+    </tr>
+    <tr>
+      <th scope="row">Email :</th>
+      <td>contact&#64;juet.ac.in</td>
+    </tr>
+  </tbody>
+</table>
+ 	</div>
+ 	
+ 	<br><br>
+ 	<div style="margin-left: 5%; text-align: left;font-weight: 600;font-size: 20px;border: 2px solid black;padding: 50px;">
+ 	<h1 style="text-align: center;">Your Message</h1><br>
+ 	<form>
+ 	    <div class="form-group">
+            <div class="row">
+                <div class="col-2">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name......">
+                </div>
+            </div>    
+ 	    </div>
+ 	     <div class="form-group">
+            <div class="row">
+                <div class="col-2">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Your Email......">
+                </div>
+            </div>    
+ 	    </div>
+ 	     <div class="form-group">
+            <div class="row">
+                <div class="col-2">
+                    <label for="name">Message</label>
+                </div>
+                <div class="col-7">
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Type Your Message Here......."></textarea>
+                </div>
+            </div>    
+ 	    </div>
+ 	</form>
+ 	</div>
+ 	<br><br>
+ 	<div>
+ 	    <h1>
+ 	        Find Us Here
+ 	    </h1>
+ 	    <br>
+            <div id="map" style="height: 500px;"></div>
+        
+ 	</div>
+</div>
+
+
+ <br><br>
+   <footer style="background-color: black;opacity: .8;color: white;text-align: center;height: 70px;padding-top: 1%;">
+       Copyright &copy; Sayuj Sehgal 2019
+   </footer>
+   
+   <script>
+        function initMap() {
+            let location = {
+                lat: 24.4349,
+                lng: 77.1612
+            };
+            let map = new google.maps.Map(document.querySelector("#map"), {
+                zoom: 17,
+                center: location
+            });
+            let marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYe9PsCOQH2IP5x88wnemt2UuUrz0sHb4&callback=initMap" type="text/javascript">
+    </script>
+   
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

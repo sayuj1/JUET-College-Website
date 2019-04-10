@@ -1,0 +1,16 @@
+
+        ul{
+            font-size: 25px;
+            background-color: black;
+            height: 100px;
+            opacity: 0.8;
+        }
+        ul .nav-link{
+            margin-left: 50px;
+            margin-top: 20px;
+            color: white
+        }
+        ul .nav-link:hover{
+            color: white;
+            border-bottom: 4px solid yellow;
+        }
